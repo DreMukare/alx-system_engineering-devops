@@ -3,7 +3,8 @@
 # has sleep 2 in each iteration
 # displays "I am invincible!!" when recieving a SIGTERM signal
 
-while true
+i=true
+while [ $i ]
 do
 	echo "To infinity and beyond"
 	sleep 2
