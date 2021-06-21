@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Displays list of all currently running processes
+
+ps aux | less
