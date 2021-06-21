@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
+# displays it's own pld
+
 echo $$
