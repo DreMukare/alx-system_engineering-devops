@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# stops 4-to_infinity_and_beyond
+
+pkill -9 -f "./4-to_infinity_and_beyond"
