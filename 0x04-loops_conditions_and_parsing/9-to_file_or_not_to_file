@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # checks if file exists and prints messages based on condition
 # the checks if file is empty or not and if file is a regular file or not
+# preferable to use -e since -a has been deprecated
 if [ -a holbertonschool ] 
 then
 	echo "holbertonschool file exists"
