@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 # displays the content of the current directory in a list format
 # only part of the name after the first dash is displayed
-for f in *
+
+list=$(ls)
+for i in $list
 do
-	e="$(basename -- "$f")"
-	echo "$e"
+  cut -d- -f2 <<< $i
 done
