@@ -5,5 +5,5 @@
 list=$(ls)
 for i in $list
 do
-  cut -d- -f2 <<< $i
+  cut -d- -f2 <<< "$i"
 done
