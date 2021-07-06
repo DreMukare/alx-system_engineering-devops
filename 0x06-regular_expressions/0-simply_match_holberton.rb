@@ -1,3 +1,4 @@
 #!/usr/bin/env ruby
+# Matches "Holberton"
 
-/Holberton/
+puts ARGV[0].scan(/Holberton/).join
