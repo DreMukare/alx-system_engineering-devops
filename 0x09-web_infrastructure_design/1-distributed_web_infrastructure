@@ -1,1 +1,20 @@
+The additional server will enable us to have redundancy as well as reduce congestion due to the addition of a load balancer.
+This will overall improve the performance of the website.
+The load balancer will use the round robin distribution algorithm. This algorithm works by assigning requests to the servers
+depending on the number of the request, oddly number requests go to server 1 and evenly numbered requests go to server 2.
+The load balancer enables an Active-Active setup, this is to reduce the congestion and lessen the load of the first server.
+In an active-active setup both servers will work at the same time while in a passive-passive set up one of the servers will be on standby
+for redundancy.
+The Primary-Replica cluster usually gets updated everytime the Master database gets updated. Data from the master gets replicated to the slave.
+The replica node relies on data from the primary node. This is because replication is event-driven.
+
+The SPOF are:
+  - the connection of the client to the internet
+  - the connection of the web servers to the internet
+  - malfunction in the load balancer
+
+The server set up has no firewalls and does not use HTTPS making it vulnerable to attacks.
+There is also no monitoring so it would be difficult to predict peak hours, to identify when congestion occurs and why the congestion occurs as well
+as enable faster recovery from congestion.
+
 https://imgur.com/WOQZ6er
