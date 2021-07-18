@@ -1,1 +1,15 @@
+The firewalls are to add protection to the load balancer and the two servers.
+There is also addition of HTTPS for the encryption of the requests and the response to the requests.
+The traffic is served over HTTPS because it has added security.
+Monitoring enables the idenfitication of points of failure in the setup, congestion, it also enables better planning of updates
+to the set up due to the identification of peak hours.
+The server monitor runs in a container alongside any number of other containers on a host.
+From there it can collect metrics from its neighboring containers and from the host itself.
+To monitor the web sever Queries Per Second, a job that runs a `SHOW STATUS` query could be run at certain intervals.
+
+Terminating SSL at the load balancer level is an issue because in the chance that one gained unauthorized access past the load balancer,
+they would be able to eavesdrop on the requests and responses.
+If this MySQL server were to fail, all the data changes from the writes would be lost.
+Servers with the same components might be a problem because there is still the possibility for both of them being overwhelmed by congestion.
+
 https://imgur.com/KjSKTym
