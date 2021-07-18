@@ -1,1 +1,28 @@
+The user will enter the url (www.foobar.com) into their browser search bar. The browser will search in its cache to see if it has the IP address to the url,
+if it doesn't the OS will check in its cache if it has the IP address. If the OS doesn't have it, the resolver will query the root server, the root server will
+provide the IP address to the TLD server. The resolver will save this IP address in its cache, it will then query the TLD server for the IP address to the Authoritative
+Name Server, the resolver will save this IP address to its cache. The authoritative name server will finally give the resolver the IP address to www.foobar.com, the resolver
+will save the IP address and deliver it back to the browser, all within milliseconds, this will enable the browser to access www.foobar.com
+
+A server is a computer that responds to the HTTP requests of client computer.
+The domain name gets converted into an IP address which allows the client computer to located the server and therefore query the server.
+The www in www.foobar.com is an A record.
+The web server serves content in the form of static web pages or images or other files to the client.
+The application server allows server side scripting which enables the alteration of static web pages based on data from the database,
+the application server can also be used to alter the code base or the database.
+The database holds relevant data that can be used in the scripting of web pages.
+The server uses the OSI model and TCP/IP to communicate with the computer of the user requesting the website.
+
+There are multiple single points of failure in the infrastructure:
+  - the connection of the user to the internet
+  - the connection of the server to the internet
+  - the failing of the web server
+  
+Since there is only one server, downtime is inevitable in the case when updates need to be made to the server.
+The update times would have to be scheduled to the hours when there aren't many users trying to access www.foobar.com/
+
+There is a possibility that the server would also face congestion due to high amounts of traffic. It would therefore be unable to scale up
+in order to deal with the increased amount of requests due to it being the only server available.
+
+
 https://imgur.com/Q5tNdHW
