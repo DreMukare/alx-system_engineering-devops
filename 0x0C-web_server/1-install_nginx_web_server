@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # installs nginx on webserver
 # changes default webpage to print "Holberton School"
-apt-get update
+apt-get -y update
 apt-get install -y nginx
 ufw allow 'Nginx HTTP'
 echo 'Holberton School' > /var/www/html/index.nginx-debian.html
