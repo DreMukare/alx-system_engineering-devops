@@ -5,6 +5,7 @@
 apt-get -y update
 apt-get -y install nginx
 ufw allow 'Nginx HTTP'
+echo 'Holberton School' > /var/www/html/index.nginx-debian.html
 mkdir /etc/nginx/html
 touch /etc/nginx/html/custom_404.html
 echo "Ceci n'est pas une page" > /etc/nginx/html/custom_404.html
