@@ -3,16 +3,6 @@
 # changes default webpage to print "Holberton School"
 apt-get update
 apt-get install -y nginx
-
-mkdir /etc/nginx/html
-touch /etc/nginx/html/index.html
-echo "Holberton School" > /etc/nginx/html/index.html
-printf %s "server {
-     listen      80 default_server;
-     listen      [::]:80 default_server;
-     root        /etc/nginx/html;
-     index       index.html index.html;
-}
-" > /etc/nginx/sites-available/default
-
-service nginx restart
+ufw allow 'Nginx HTTP'
+echo 'Holberton School' > /var/www/html/index.nginx-debian.html
+service nginx start
