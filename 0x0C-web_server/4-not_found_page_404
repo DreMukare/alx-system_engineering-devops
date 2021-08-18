@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# configures Nginx server so that /redirect_me redirects to other page
+
+
+apt-get -y update
+apt-get -y install nginx
+ufw allow 'Nginx HTTP'
+mkdir /etc/nginx/html
+touch /etc/nginx/html/custom_404.html
+echo "Ceci n'est pas une page" > /etc/nginx/html/custom_404.html
+sed -i '/root /var/www/html;/a location = /custom_404.html {\n\troot /etc/nginx/html;\n\tinternal;\n}' /etc/nginx/sites-available/default
+service nginx start
