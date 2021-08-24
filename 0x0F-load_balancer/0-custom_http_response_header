@@ -13,9 +13,9 @@ apt-get install -y nginx
 
 sudo mkdir -p /var/www/html
 sudo touch /var/www/html/index.html
-sudo echo "Holberton School" > /var/www/html/index.html
+echo "Holberton School" > /var/www/html/index.html
 sudo touch /var/www/html/custom_404.html
-sudo echo "Ceci n'est pas une page" > /var/www/html/custom_404.html
+echo "Ceci n'est pas une page" > /var/www/html/custom_404.html
 
 printf %s "server {
     listen 80 default_server;
@@ -33,4 +33,4 @@ printf %s "server {
     }
 }" > /etc/nginx/sites-available/default
 
-service nginx restart
+sudo service nginx restart
