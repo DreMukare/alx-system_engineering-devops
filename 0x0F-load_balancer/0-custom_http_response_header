@@ -11,7 +11,10 @@
 apt-get update
 apt-get install -y nginx
 
+mkdir /var/www/html
+touch /var/www/html/index.html
 echo "Holberton School" > /var/www/html/index.html
+touch /var/www/html/custom_404.html
 echo "Ceci n'est pas une page" > /var/www/html/custom_404.html
 
 printf %s "server {
