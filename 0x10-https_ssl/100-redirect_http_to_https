@@ -44,7 +44,6 @@ defaults
 
 frontend www-http
         bind *:443
-        redirect scheme https code 301 if !{ ssl_fc }
         reqadd X-Forwarded-Proto:\ http
         default_backend www-backend
 
@@ -57,7 +56,7 @@ frontend www-https
 
 backend www-backend
         balance roundrobin
-        redirect scheme https if !{ ssl_fc }
+        redirect scheme https code 301 if !{ ssl_fc }
         server 233-web-01 34.75.183.8:80 check
         server 233-web-02 34.139.231.119:80 check
 
