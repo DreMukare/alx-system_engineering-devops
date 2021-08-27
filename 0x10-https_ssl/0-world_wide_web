@@ -1,4 +1,4 @@
-
+#!/usr/bin/env bash
 # Output : The subdomain [SUBDOMAIN] is a [RECORD_TYPE] and points to [DESTINATION]
 # When only the parameter domain is passed, information for all subdomains is printed out.
 # When both a domain and subdomain are passed, information for the specified domain is printed.
