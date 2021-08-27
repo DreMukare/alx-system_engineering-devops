@@ -17,7 +17,7 @@ function domainInfo() {
     then
         RECORDTYPE="$(dig $2.$1 | grep -A1 'ANSWER SECTION:' | tr '\t' '\n' | tail -2 | tr '\n' ' ' | awk '{print $1}')"
         DESTINATION="$(dig +short $2.$1)"
-        echo "The subdomain $subdomain is a $RECORDTYPE record and points to $DESTINATION"
+        echo "The subdomain $2 is a $RECORDTYPE record and points to $DESTINATION"
     else
         echo "Usage: ./0-world_wide_web [DOMAIN] [optional SUBDOMAIN]"
     fi
