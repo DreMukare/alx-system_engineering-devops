@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# executes the whoami command
+
+if [[ $# -eq 1 ]]
+then
+    su $1
+    whoami
+else
+    whoami
+fi
