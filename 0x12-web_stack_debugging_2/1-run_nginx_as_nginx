@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 # runs nginx as nginx user
 
-sudo -u "nginx" service restart nginx
+su - nginx
+sudo -u nginx sed -i "s/80/8080/g" /etc/nginx/sites-available/default
+sudo -u nginx service restart nginx
