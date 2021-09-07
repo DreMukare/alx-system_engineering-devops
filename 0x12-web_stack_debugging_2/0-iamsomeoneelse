@@ -3,7 +3,7 @@
 
 if [[ $# -eq 1 ]]
 then
-    su $1
+    su - "$1"
     whoami
 else
     whoami
