@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# runs nginx as nginx user
+
+sudo -u "nginx" service restart nginx
