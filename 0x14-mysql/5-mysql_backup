@@ -5,5 +5,5 @@ mysqldump -u root -p"$1" --all-databases > backup.sql
 
 if [ -f backup,sql ]
 then
-    tar cfz "$(date '+%d-%m-%Y').tar.gz" backup.sql
+    tar -czvf "$(date '+%d-%m-%Y').tar.gz" backup.sql
 fi
