@@ -6,11 +6,9 @@ from sys import argv
 
 
 if __name__ == '__main__':
-    user_data = requests.get(
-        'https://jsonplaceholder.typicode.com/users/{}'.format(argv[1])).json()
-    user_tasks = requests.get(
-        'https://jsonplaceholder.typicode.com/users/{}/todos'
-        .format(argv[1])).json()
+    url = 'https://jsonplaceholder.typicode.com/'
+    user_data = requests.get(url + 'users/{}'.format(argv[1])).json()
+    user_tasks = requests.get(url + 'todos', params={'userId': argv[1]}).json()
     completed_tasks = []
     for task in user_tasks:
         if task.get('completed'):
