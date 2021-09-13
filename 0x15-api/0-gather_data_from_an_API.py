@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 ''' makes a get request to a REST API '''
 import requests
-import json
 from sys import argv
 
 
