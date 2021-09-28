@@ -18,5 +18,3 @@ def top_ten(subreddit):
     while i < 10:
         print(all_posts[i].get('data').get('title'))
         i += 1
-
-
